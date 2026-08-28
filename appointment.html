@@ -1,2 +1,40 @@
-<!doctype html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>دریافت نوبت | دکتر مریم صالحی</title><link rel="stylesheet" href="styles.css"></head><body data-page="appointment"><div data-header></div><main id="main" class="booking"><section class="booking-info reveal"><span class="label">شروع یک گفت‌وگو</span><h1>شاید امروز، زمانِ<br>شروع کردن باشد.</h1><p>فرم را تکمیل کنید. برای هماهنگی زمان جلسه با شما تماس می‌گیریم. جلسه اول به شناخت مسئله، انتظارات و انتخاب مسیر مناسب درمان اختصاص دارد.</p><p>✓ اطلاعات شما کاملاً محرمانه باقی می‌ماند.<br>✓ مدت جلسه معمولاً ۵۰ دقیقه است.<br>✓ امکان هماهنگی جلسه آنلاین وجود دارد.</p></section><form class="form reveal" novalidate><h2>درخواست وقت مشاوره</h2><p>موارد ستاره‌دار برای هماهنگی ضروری‌اند.</p><label>نام و نام خانوادگی *<input name="name" autocomplete="name" required placeholder="نام شما"></label><label>شماره همراه *<input name="phone" autocomplete="tel" inputmode="tel" required placeholder="۰۹۱۲ ۰۰۰ ۰۰۰۰"></label><label>زمینه مشاوره *<select required><option value="">انتخاب کنید</option><option>اضطراب و افسردگی</option><option>وسواس</option><option>روان‌شناسی سلامت</option><option>رشد و خودشناسی</option></select></label><label>شیوه جلسه *<select required><option value="">انتخاب کنید</option><option>حضوری</option><option>آنلاین</option></select></label><label class="full">توضیح کوتاه <textarea rows="4" placeholder="اگر مایلید کمی درباره دلیل مراجعه بنویسید."></textarea></label><button class="btn" type="submit">ثبت درخواست و تماس برای هماهنگی</button><p class="status" role="status"></p></form></main><div data-footer></div><script src="script.js"></script></body></html>
-
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>دریافت نوبت | دکتر مریم صالحی</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="appointment-fixes.css">
+</head>
+<body data-page="appointment">
+  <div data-header></div>
+  <main id="main" class="booking">
+    <section class="booking-info reveal">
+      <span class="label">شروع یک گفت‌وگو</span>
+      <h1>شاید امروز، زمانِ<br>شروع کردن باشد.</h1>
+      <p>فرم را تکمیل کنید. برای هماهنگی زمان جلسه با شما تماس می‌گیریم. جلسه اول به شناخت مسئله، انتظارات و انتخاب مسیر مناسب درمان اختصاص دارد.</p>
+      <p>✓ اطلاعات شما کاملاً محرمانه باقی می‌ماند.<br>✓ مدت جلسه معمولاً ۵۰ دقیقه است.<br>✓ امکان هماهنگی جلسه آنلاین وجود دارد.</p>
+    </section>
+    <form class="form reveal" novalidate>
+      <h2>درخواست وقت مشاوره</h2>
+      <p>موارد ستاره‌دار برای هماهنگی ضروری‌اند.</p>
+      <label>نام و نام خانوادگی *<input name="name" autocomplete="name" required placeholder="نام شما"></label>
+      <label>شماره همراه *
+        <span class="phone-field" dir="ltr">
+          <span class="country-code" aria-label="کد کشور ایران">+98</span>
+          <input name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" required pattern="9[0-9]{9}" maxlength="10" placeholder="912 000 0000" aria-describedby="phone-help">
+        </span>
+        <small id="phone-help" class="field-help">شماره را بدون صفر ابتدایی وارد کنید.</small>
+      </label>
+      <label>زمینه مشاوره *<select required><option value="">انتخاب کنید</option><option>اضطراب و افسردگی</option><option>وسواس</option><option>روان‌شناسی سلامت</option><option>رشد و خودشناسی</option></select></label>
+      <label>شیوه جلسه *<select required><option value="">انتخاب کنید</option><option>حضوری</option><option>آنلاین</option></select></label>
+      <label class="full">توضیح کوتاه <textarea rows="4" placeholder="اگر مایلید کمی درباره دلیل مراجعه بنویسید."></textarea></label>
+      <button class="btn" type="submit">ثبت درخواست و تماس برای هماهنگی</button>
+      <p class="status" role="status"></p>
+    </form>
+  </main>
+  <div data-footer></div>
+  <script src="script.js"></script>
+</body>
+</html>

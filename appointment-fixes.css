@@ -1,0 +1,77 @@
+body[data-page="appointment"] .header:not(.stuck) {
+  color: #fff;
+  border-bottom-color: rgba(255, 255, 255, .2);
+}
+
+body[data-page="appointment"] .header:not(.stuck) .logo small {
+  color: rgba(255, 255, 255, .72);
+}
+
+body[data-page="appointment"] .header:not(.stuck) nav a {
+  color: #fff;
+}
+
+body[data-page="appointment"] .header:not(.stuck) .logo > span {
+  border-color: rgba(255, 255, 255, .48);
+}
+
+body[data-page="appointment"] .header:not(.stuck) .menu i {
+  background: #fff;
+}
+
+body[data-page="appointment"] .header:not(.stuck) .nav-cta {
+  background: #fff;
+  color: var(--g);
+  box-shadow: none;
+}
+
+.phone-field {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  margin-top: 2px;
+  border-bottom: 1px solid var(--line);
+}
+
+.form .phone-field input {
+  min-width: 0;
+  border: 0;
+  direction: ltr;
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.country-code {
+  padding: 0 14px;
+  border-right: 1px solid var(--line);
+  color: var(--g);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.field-help {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  body[data-page="appointment"] .header.open {
+    color: var(--g);
+  }
+
+  body[data-page="appointment"] .header.open .logo small {
+    color: var(--muted);
+  }
+
+  body[data-page="appointment"] .header.open .logo > span {
+    border-color: var(--g);
+  }
+
+  body[data-page="appointment"] .header.open .menu i {
+    background: var(--g);
+  }
+}
