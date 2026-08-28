@@ -65,6 +65,92 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
   font-weight: 400;
 }
 
+.country-picker {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 4px 8px;
+}
+
+.country-trigger {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(9, 38, 52, .08);
+  font-size: 21px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.country-trigger:hover,
+.country-trigger[aria-expanded="true"] {
+  border-color: var(--c);
+  box-shadow: 0 8px 22px rgba(9, 38, 52, .14);
+}
+
+.country-trigger:active {
+  transform: scale(.96);
+}
+
+.country-menu {
+  position: absolute;
+  z-index: 50;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 230px;
+  max-height: 270px;
+  padding: 7px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .97);
+  box-shadow: 0 22px 55px rgba(9, 38, 52, .18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px) scale(.98);
+  transform-origin: top left;
+  transition: opacity 160ms ease, transform 200ms var(--ease), visibility 160ms;
+  direction: rtl;
+}
+
+.country-picker.open .country-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.country-menu button {
+  width: 100%;
+  min-height: 43px;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--g);
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  align-items: center;
+  gap: 8px;
+  text-align: right;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.country-menu button:hover,
+.country-menu button[aria-selected="true"] {
+  background: var(--sage);
+}
+
+.country-menu button b {
+  color: var(--muted);
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
 @media (max-width: 900px) {
   body[data-page="appointment"] .header.open {
     color: var(--g);

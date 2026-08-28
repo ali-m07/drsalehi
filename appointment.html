@@ -22,16 +22,20 @@
       <label>نام و نام خانوادگی *<input name="name" autocomplete="name" required placeholder="نام شما"></label>
       <label>شماره همراه *
         <span class="phone-field" dir="ltr">
-          <select class="country-select" name="country-code" aria-label="انتخاب کشور و پیش‌شماره">
-            <option value="+98" selected>🇮🇷 +98</option>
-            <option value="+93">🇦🇫 +93</option>
-            <option value="+971">🇦🇪 +971</option>
-            <option value="+90">🇹🇷 +90</option>
-            <option value="+49">🇩🇪 +49</option>
-            <option value="+44">🇬🇧 +44</option>
-            <option value="+1">🇨🇦 +1</option>
-            <option value="+1">🇺🇸 +1</option>
-          </select>
+          <span class="country-picker">
+            <input type="hidden" name="country-code" value="+98">
+            <button class="country-trigger" type="button" aria-label="انتخاب کشور؛ ایران" aria-haspopup="listbox" aria-expanded="false"><span>🇮🇷</span></button>
+            <span class="country-menu" role="listbox" aria-label="کشورها">
+              <button type="button" role="option" aria-selected="true" data-code="+98" data-flag="🇮🇷" data-country="ایران">🇮🇷 <span>ایران</span><b>+98</b></button>
+              <button type="button" role="option" aria-selected="false" data-code="+93" data-flag="🇦🇫" data-country="افغانستان">🇦🇫 <span>افغانستان</span><b>+93</b></button>
+              <button type="button" role="option" aria-selected="false" data-code="+971" data-flag="🇦🇪" data-country="امارات">🇦🇪 <span>امارات</span><b>+971</b></button>
+              <button type="button" role="option" aria-selected="false" data-code="+90" data-flag="🇹🇷" data-country="ترکیه">🇹🇷 <span>ترکیه</span><b>+90</b></button>
+              <button type="button" role="option" aria-selected="false" data-code="+49" data-flag="🇩🇪" data-country="آلمان">🇩🇪 <span>آلمان</span><b>+49</b></button>
+              <button type="button" role="option" aria-selected="false" data-code="+44" data-flag="🇬🇧" data-country="بریتانیا">🇬🇧 <span>بریتانیا</span><b>+44</b></button>
+              <button type="button" role="option" aria-selected="false" data-code="+1" data-flag="🇨🇦" data-country="کانادا">🇨🇦 <span>کانادا</span><b>+1</b></button>
+              <button type="button" role="option" aria-selected="false" data-code="+1" data-flag="🇺🇸" data-country="آمریکا">🇺🇸 <span>آمریکا</span><b>+1</b></button>
+            </span>
+          </span>
           <input name="phone" type="tel" autocomplete="tel-national" inputmode="tel" required maxlength="15" placeholder="912 000 0000" aria-describedby="phone-help">
         </span>
         <small id="phone-help" class="field-help">کشور را انتخاب و شماره را بدون صفر ابتدایی وارد کنید.</small>
