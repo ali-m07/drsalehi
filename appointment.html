@@ -24,7 +24,7 @@
         <span class="phone-field" dir="ltr">
           <span class="country-picker">
             <input type="hidden" name="country-code" value="+98">
-            <button class="country-trigger" type="button" aria-label="انتخاب کشور؛ ایران" aria-haspopup="listbox" aria-expanded="false"><span>🇮🇷</span></button>
+            <button class="country-trigger" type="button" aria-label="انتخاب کشور؛ ایران" aria-haspopup="listbox" aria-expanded="false"><span><img src="assets/flags/ir.png" alt=""></span></button>
             <span class="country-menu" role="listbox" aria-label="کشورها">
               <button type="button" role="option" aria-selected="true" data-code="+98" data-flag="🇮🇷" data-country="ایران">🇮🇷 <span>ایران</span><b>+98</b></button>
               <button type="button" role="option" aria-selected="false" data-code="+93" data-flag="🇦🇫" data-country="افغانستان">🇦🇫 <span>افغانستان</span><b>+93</b></button>
@@ -41,8 +41,22 @@
         </span>
         <small id="phone-help" class="field-help">کشور را انتخاب و شماره را بدون صفر ابتدایی وارد کنید.</small>
       </label>
-      <label>زمینه مشاوره *<select required><option value="">انتخاب کنید</option><option>اضطراب و افسردگی</option><option>وسواس</option><option>روان‌شناسی سلامت</option><option>رشد و خودشناسی</option></select></label>
-      <label>شیوه جلسه *<select required><option value="">انتخاب کنید</option><option>حضوری</option><option>آنلاین</option></select></label>
+      <fieldset class="choice-field">
+        <legend>زمینه مشاوره *</legend>
+        <div class="choice-grid topics">
+          <label><input type="radio" name="topic" value="اضطراب و افسردگی" required><span>اضطراب و افسردگی</span></label>
+          <label><input type="radio" name="topic" value="وسواس"><span>وسواس</span></label>
+          <label><input type="radio" name="topic" value="روان‌شناسی سلامت"><span>روان‌شناسی سلامت</span></label>
+          <label><input type="radio" name="topic" value="رشد و خودشناسی"><span>رشد و خودشناسی</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="choice-field">
+        <legend>شیوه جلسه *</legend>
+        <div class="choice-grid session">
+          <label><input type="radio" name="session" value="حضوری" required><span>حضوری</span></label>
+          <label><input type="radio" name="session" value="آنلاین"><span>آنلاین</span></label>
+        </div>
+      </fieldset>
       <label class="full">توضیح کوتاه <textarea rows="4" placeholder="اگر مایلید کمی درباره دلیل مراجعه بنویسید."></textarea></label>
       <button class="btn" type="submit">ثبت درخواست و تماس برای هماهنگی</button>
       <p class="status" role="status"></p>

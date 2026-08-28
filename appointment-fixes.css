@@ -204,3 +204,221 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
     padding-inline: 7px;
   }
 }
+
+/* Appointment experience — soft clinical editorial */
+.booking {
+  position: relative;
+  overflow: hidden;
+  align-items: center;
+  background:
+    radial-gradient(circle at 8% 82%, rgba(92, 150, 180, .35), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(255, 121, 87, .16), transparent 25%),
+    #071b25;
+}
+
+.booking::before,
+.booking::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.booking::before {
+  width: 430px;
+  height: 430px;
+  right: -190px;
+  bottom: -170px;
+}
+
+.booking::after {
+  width: 260px;
+  height: 260px;
+  right: -105px;
+  bottom: -85px;
+}
+
+.booking-info,
+.form {
+  position: relative;
+  z-index: 1;
+}
+
+.booking-info {
+  max-width: 600px;
+}
+
+.booking-info .label {
+  display: inline-flex;
+  padding: 7px 13px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .06);
+}
+
+.booking-info h1 {
+  text-wrap: balance;
+  letter-spacing: -.045em;
+}
+
+.form {
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 32px;
+  background: linear-gradient(145deg, #fff 0%, #fbfcf8 54%, #f1f7eb 100%);
+  box-shadow: 0 38px 100px rgba(0, 0, 0, .28);
+  gap: 16px;
+}
+
+.form h2 {
+  font-size: clamp(26px, 2.2vw, 36px);
+}
+
+.form > p:first-of-type {
+  margin-top: -8px;
+}
+
+.form > label:not(.full) {
+  padding: 13px 15px 9px;
+  border: 1px solid rgba(9, 38, 52, .1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .72);
+}
+
+.form > label.full {
+  padding: 14px 16px;
+  border: 1px solid rgba(9, 38, 52, .1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .68);
+}
+
+.form input,
+.form textarea {
+  font-size: 13px;
+}
+
+.form textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.phone-field {
+  border-bottom: 0;
+}
+
+.country-trigger span,
+.country-trigger img {
+  display: block;
+  width: 31px;
+  height: 22px;
+  margin: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  box-shadow: 0 2px 7px rgba(9, 38, 52, .18);
+}
+
+.country-menu button img {
+  width: 24px;
+  height: 17px;
+  border-radius: 3px;
+  object-fit: cover;
+  box-shadow: 0 1px 4px rgba(9, 38, 52, .15);
+}
+
+.choice-field {
+  min-width: 0;
+  margin: 0;
+  padding: 13px 14px 14px;
+  border: 1px solid rgba(9, 38, 52, .1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, .68);
+}
+
+.choice-field legend {
+  padding: 0 5px;
+  color: var(--g);
+  font-size: 10px;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.choice-grid label {
+  cursor: pointer;
+}
+
+.choice-grid input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice-grid span {
+  min-height: 40px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  color: var(--muted);
+  text-align: center;
+  font-size: 10px;
+  transition: transform 160ms ease, color 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.choice-grid input:checked + span {
+  border-color: var(--g);
+  background: var(--g);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(9, 38, 52, .16);
+}
+
+.choice-grid input:focus-visible + span {
+  outline: 3px solid rgba(255, 121, 87, .45);
+  outline-offset: 2px;
+}
+
+.choice-grid label:active span {
+  transform: scale(.97);
+}
+
+.form > .btn {
+  min-height: 58px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--g), var(--g2));
+  box-shadow: 0 18px 38px rgba(9, 38, 52, .22);
+  font-size: 13px;
+}
+
+.form > .btn:hover {
+  background: linear-gradient(135deg, var(--g2), var(--c));
+}
+
+@media (max-width: 900px) {
+  .booking {
+    gap: 42px;
+  }
+
+  .booking-info {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 560px) {
+  .form {
+    border-radius: 24px;
+    padding: 22px;
+  }
+
+  .choice-field {
+    grid-column: 1 / -1;
+  }
+
+  .choice-grid.topics {
+    grid-template-columns: 1fr;
+  }
+}
