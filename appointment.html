@@ -54,6 +54,16 @@
         </span>
       </label>
       <label class="full">توضیح کوتاه <textarea rows="4" placeholder="اگر مایلید کمی درباره دلیل مراجعه بنویسید."></textarea></label>
+      <label class="receipt-upload full">
+        <span class="receipt-title">رسید پرداخت هزینه مشاوره</span>
+        <input type="file" name="payment-receipt" accept="image/jpeg,image/png,image/webp,application/pdf">
+        <span class="receipt-drop">
+          <span class="receipt-icon" aria-hidden="true"><i></i></span>
+          <span class="receipt-copy"><b>تصویر یا PDF رسید را انتخاب کنید</b><small>فایل را اینجا رها کنید یا برای انتخاب بزنید · حداکثر ۱۰ مگابایت</small></span>
+          <span class="receipt-action">انتخاب فایل</span>
+        </span>
+        <span class="receipt-file" aria-live="polite"></span>
+      </label>
       <button class="btn" type="submit">ثبت درخواست و تماس برای هماهنگی</button>
       <p class="status" role="status"></p>
     </form>
