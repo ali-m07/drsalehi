@@ -1,0 +1,4 @@
+Vazirmatn variable webfont
+Source: https://github.com/rastikerdar/vazirmatn
+License: SIL Open Font License 1.1
+Downloaded: 2026-08-28
