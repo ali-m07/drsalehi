@@ -1,0 +1,10 @@
+const header=document.querySelector('#header');
+const menu=document.querySelector('.menu');
+menu.addEventListener('click',()=>{const open=header.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'بستن منو':'باز کردن منو')});
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{header.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+let lastY=0;
+addEventListener('scroll',()=>{const y=scrollY;header.style.transform=y>lastY&&y>180?'translateY(-100%)':'translateY(0)';header.style.position=y>92?'fixed':'absolute';header.style.background=y>92?'rgba(250,248,242,.9)':'transparent';header.style.backdropFilter=y>92?'blur(16px)':'none';lastY=y},{passive:true});
+const form=document.querySelector('#booking-form');
+form.addEventListener('submit',e=>{e.preventDefault();const status=form.querySelector('.form-status');if(!form.checkValidity()){status.textContent='لطفاً نام، شماره همراه و زمینه مشاوره را تکمیل کنید.';form.reportValidity();return}const button=form.querySelector('button');button.disabled=true;button.textContent='در حال ثبت…';setTimeout(()=>{button.disabled=false;button.innerHTML='ثبت درخواست جلسه <span>↙</span>';status.textContent='درخواست شما ثبت شد؛ برای هماهنگی با شما تماس می‌گیریم.';form.reset()},700)});
