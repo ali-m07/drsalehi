@@ -41,22 +41,26 @@
         </span>
         <small id="phone-help" class="field-help">کشور را انتخاب و شماره را بدون صفر ابتدایی وارد کنید.</small>
       </label>
-      <fieldset class="choice-field">
-        <legend>زمینه مشاوره *</legend>
-        <div class="choice-grid topics">
-          <label><input type="radio" name="topic" value="اضطراب و افسردگی" required><span>اضطراب و افسردگی</span></label>
-          <label><input type="radio" name="topic" value="وسواس"><span>وسواس</span></label>
-          <label><input type="radio" name="topic" value="روان‌شناسی سلامت"><span>روان‌شناسی سلامت</span></label>
-          <label><input type="radio" name="topic" value="رشد و خودشناسی"><span>رشد و خودشناسی</span></label>
-        </div>
-      </fieldset>
-      <fieldset class="choice-field">
-        <legend>شیوه جلسه *</legend>
-        <div class="choice-grid session">
-          <label><input type="radio" name="session" value="حضوری" required><span>حضوری</span></label>
-          <label><input type="radio" name="session" value="آنلاین"><span>آنلاین</span></label>
-        </div>
-      </fieldset>
+      <label class="select-control">زمینه مشاوره *
+        <span class="select-shell">
+          <select name="topic" required>
+            <option value="">انتخاب کنید</option>
+            <option>اضطراب و افسردگی</option>
+            <option>وسواس</option>
+            <option>روان‌شناسی سلامت</option>
+            <option>رشد و خودشناسی</option>
+          </select>
+        </span>
+      </label>
+      <label class="select-control">شیوه جلسه *
+        <span class="select-shell">
+          <select name="session" required>
+            <option value="">انتخاب کنید</option>
+            <option>حضوری</option>
+            <option>آنلاین</option>
+          </select>
+        </span>
+      </label>
       <label class="full">توضیح کوتاه <textarea rows="4" placeholder="اگر مایلید کمی درباره دلیل مراجعه بنویسید."></textarea></label>
       <button class="btn" type="submit">ثبت درخواست و تماس برای هماهنگی</button>
       <p class="status" role="status"></p>
