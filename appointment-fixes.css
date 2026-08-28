@@ -151,6 +151,27 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
   font-variant-numeric: tabular-nums;
 }
 
+.country-search {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: 38px;
+  margin-bottom: 5px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--g);
+  direction: rtl;
+  font-size: 11px;
+  outline: none;
+}
+
+.country-search:focus {
+  border-color: var(--c);
+}
+
 @media (max-width: 900px) {
   body[data-page="appointment"] .header.open {
     color: var(--g);
