@@ -73,14 +73,14 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
 }
 
 .country-trigger {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 38px;
   padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 5px 16px rgba(9, 38, 52, .08);
-  font-size: 21px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: none;
+  font-size: 24px;
   line-height: 1;
   cursor: pointer;
   transition: transform 160ms ease, box-shadow 200ms ease, border-color 200ms ease;
@@ -88,8 +88,8 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
 
 .country-trigger:hover,
 .country-trigger[aria-expanded="true"] {
-  border-color: var(--c);
-  box-shadow: 0 8px 22px rgba(9, 38, 52, .14);
+  background: var(--sage);
+  box-shadow: none;
 }
 
 .country-trigger:active {
@@ -101,12 +101,12 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
   z-index: 50;
   top: calc(100% + 8px);
   left: 0;
-  width: 230px;
-  max-height: 270px;
-  padding: 7px;
+  width: 190px;
+  max-height: 176px;
+  padding: 5px;
   overflow-y: auto;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, .97);
   box-shadow: 0 22px 55px rgba(9, 38, 52, .18);
   opacity: 0;
@@ -125,10 +125,10 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
 
 .country-menu button {
   width: 100%;
-  min-height: 43px;
-  padding: 7px 10px;
+  min-height: 35px;
+  padding: 5px 8px;
   border: 0;
-  border-radius: 12px;
+  border-radius: 9px;
   background: transparent;
   color: var(--g);
   display: grid;
