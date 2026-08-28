@@ -41,13 +41,20 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
   font-variant-numeric: tabular-nums;
 }
 
-.country-code {
-  padding: 0 14px;
+.form .country-select {
+  width: auto;
+  min-width: 105px;
+  height: 46px;
+  padding: 0 10px;
+  border: 0;
   border-right: 1px solid var(--line);
+  background: transparent;
   color: var(--g);
   font-size: 13px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  outline: none;
 }
 
 .field-help {
@@ -73,5 +80,20 @@ body[data-page="appointment"] .header:not(.stuck) .nav-cta {
 
   body[data-page="appointment"] .header.open .menu i {
     background: var(--g);
+  }
+
+  .header.open nav .mobile-booking-link {
+    display: inline-flex;
+  }
+}
+
+.mobile-booking-link {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .form .country-select {
+    min-width: 98px;
+    padding-inline: 7px;
   }
 }

@@ -22,10 +22,19 @@
       <label>نام و نام خانوادگی *<input name="name" autocomplete="name" required placeholder="نام شما"></label>
       <label>شماره همراه *
         <span class="phone-field" dir="ltr">
-          <span class="country-code" aria-label="کد کشور ایران">+98</span>
-          <input name="phone" type="tel" autocomplete="tel-national" inputmode="numeric" required pattern="9[0-9]{9}" maxlength="10" placeholder="912 000 0000" aria-describedby="phone-help">
+          <select class="country-select" name="country-code" aria-label="انتخاب کشور و پیش‌شماره">
+            <option value="+98" selected>🇮🇷 +98</option>
+            <option value="+93">🇦🇫 +93</option>
+            <option value="+971">🇦🇪 +971</option>
+            <option value="+90">🇹🇷 +90</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+1">🇨🇦 +1</option>
+            <option value="+1">🇺🇸 +1</option>
+          </select>
+          <input name="phone" type="tel" autocomplete="tel-national" inputmode="tel" required maxlength="15" placeholder="912 000 0000" aria-describedby="phone-help">
         </span>
-        <small id="phone-help" class="field-help">شماره را بدون صفر ابتدایی وارد کنید.</small>
+        <small id="phone-help" class="field-help">کشور را انتخاب و شماره را بدون صفر ابتدایی وارد کنید.</small>
       </label>
       <label>زمینه مشاوره *<select required><option value="">انتخاب کنید</option><option>اضطراب و افسردگی</option><option>وسواس</option><option>روان‌شناسی سلامت</option><option>رشد و خودشناسی</option></select></label>
       <label>شیوه جلسه *<select required><option value="">انتخاب کنید</option><option>حضوری</option><option>آنلاین</option></select></label>
